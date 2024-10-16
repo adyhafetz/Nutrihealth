@@ -1,0 +1,230 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Import digital clock font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+/* General styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFADF;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav {
+    position: fixed;
+    background-color: #43B647;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    opacity: 0;
+    z-index: 1000;
+    width: 100%;
+    transform: translateY(-20px);
+    animation: fadeInMoveDown 1s ease forwards 0.5s;
+}
+
+@keyframes fadeInMoveDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav a {
+    color: #FFFFED;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 1em 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInMoveDown 1s ease forwards 0.5s;
+    color: #FFFFED;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInMoveUp 1s ease forwards 0.5s;
+    color: #FFFFED;
+    background-color: #43B647;
+}
+
+.logo {
+    margin-top: 40px;
+    width: 400px;
+}
+
+h2 {
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInMoveUp 1s ease forwards 1s;
+}
+
+@keyframes fadeInMoveUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Box styles */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInMoveUp 1s ease forwards 1.5s;
+    margin-bottom: 20px;
+}
+
+.box {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+    padding: 20px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box h3 {
+    color: #333;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 180px; /* Increase the font size */
+    line-height: 2; /* Adjust the line height */
+    margin: 0;
+    font-weight: bold;
+}
+
+#totalUsers {
+    color: #00B7FF;
+}
+
+#totalHealthExperts {
+    color: #FFA500;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+/* Link styles */
+a {
+    color: #43B647;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0.1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    /* Adjustments for tablets and smaller screens */
+    main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    nav a {
+        margin: 0 4px;
+    }
+
+    nav, footer{
+        font-size: 0.7rem;
+    }
+
+    nav {
+        width: 95%;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .box {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Adjust height for smaller screens */
+        margin: 10px 0; /* Reduce margin for smaller screens */
+        padding: 20px;
+    }
+
+    .box p {
+        font-size: 120px; /* Adjust font size */
+    }
+}

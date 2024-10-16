@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nutriHealth | Meal Plan</title>
+    <link rel="stylesheet" href="health-expert-meal-plan.css">
+    <script src="health-expert-meal-plan.js" defer></script>
+    <link rel="icon" href="../../media/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <a href="../health-expert-dashboard/health-expert-dashboard.html">Dashboard</a>
+        <a href="../health-expert-meal-plan/health-expert-meal-plan.html">Meal Plan</a>
+        <a href="../health-expert-exercise-plan/health-expert-exercise-plan.html">Exercise Plan</a>
+        <a href="../health-expert-appointment/health-expert-appointment.html">Appointment</a>
+        <a href="../health-expert-profile/health-expert-profile.html">Profile</a>
+    </nav>
+    <!-- Video background container -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <!-- Video sources -->
+            <source src="../../media/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Header with NutriHealth logo -->
+    <header>
+        <img src="../../media/nutriHealth.svg" alt="NutriHealth Logo" class="logo">
+    </header>
+    <main>
+        <h2><i class="fas fa-utensils" style="color: #43b647;"></i> Create Meal Plan</h2>
+        <form id="mealForm" action="create-meal-plan.php" method="POST">
+            <input type="hidden" id="mealID" name="mealID">
+            <div>
+                <label for="mealType">Meal Type:</label>
+                <select id="mealType" name="mealType" required>
+                    <option value="">Select Meal Type</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Snack">Snack</option>
+                </select>
+            </div>
+            <div>
+                <label for="mealName">Meal Name:</label>
+                <input type="text" id="mealName" name="mealName" required>
+            </div>
+            <div>
+                <label for="mealDescription">Meal Description:</label>
+                <textarea id="mealDescription" name="mealDescription" required></textarea>
+            </div>
+            <div>
+                <label for="mealCalories">Meal Calories:</label>
+                <input type="number" id="mealCalories" name="mealCalories" required>
+            </div>
+            <div>
+                <label for="mealDuration">Meal Duration (days):</label>
+                <input type="number" id="mealDuration" name="mealDuration" required>
+            </div>
+            <div>
+                <button type="submit" id="submitButton" class="create-button"><i class="fas fa-utensils"></i></button>
+            </div>
+        </form>
+    <h2><i class="fas fa-utensils" style="color: #43b647;"></i> My Meal Plans</h2>
+    <div class="table-wrapper">
+        <table id="mealPlansTable">
+            <thead>
+                <tr>
+                    <th><span>Type</span></th>
+                    <th><span>Name</span></th>
+                    <th><span>Description</span></th>
+                    <th><span>Calories</span></th>
+                    <th><span>Duration</span></th>
+                    <th><span>Edit</span></th>
+                    <th><span>Delete</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Meal plans will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+    </main>
+    <footer>
+        <span class="footer">© 2024 nutriHealth, All rights reserved.</span>
+    </footer>
+</body>
+</html>

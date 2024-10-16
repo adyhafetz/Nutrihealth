@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nutriHealth | Report</title>
+    <link rel="stylesheet" href="admin-report.css">
+    <script src="admin-report.js" defer></script>
+    <link rel="icon" href="../../media/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <a href="../admin-dashboard/admin-dashboard.html">Dashboard</a>
+        <a href="../admin-user/admin-user.html">User</a>
+        <a href="../admin-health-expert/admin-health-expert.html">Health Expert</a>
+        <a href="../admin-report/admin-report.html">Report</a>
+        <a href="../admin-profile/admin-profile.html">Profile</a>
+    </nav>
+    <!-- Video background container -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <!-- Video sources -->
+            <source src="../../media/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Header with NutriHealth logo -->
+    <header>
+        <img src="../../media/nutriHealth.svg" alt="NutriHealth Logo" class="logo">
+    </header>
+    <main>
+        <h2><i class="fas fa-file" style="color: #0073FF;"></i> Report</h2>
+    <div id="reportContent">
+        <h3 class="number">Number of Users: <span id="totalUsers"></span></h3>
+        <h3 class="number">Number of Health Experts: <span id="totalHealthExperts"></span></h3>
+        <h3><i class="fas fa-user" style="color: #00B7FF;"></i> Users List</h3>
+        <div class="search-filter">
+            <input type="text" id="userSearch" placeholder="Search by name">
+            <button id="userFilterBtn"><i class="fas fa-filter"></i></button>
+        </div>
+        <div class="table-wrapper">
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th><span>No.</span></th>
+                        <th><span>Name</span></th>
+                        <th><span>Email</span></th>
+                        <th><span>Telephone</span></th>
+                        <th><span>DOB</span></th>
+                        <th><span>BMI</span></th>
+                        <th><span>Status</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Users will be populated here by admin-report.js -->
+                </tbody>
+            </table>
+        </div>
+        <h3><i class="fa-solid fa-user-doctor" style="color: #FFBF0E;"></i> Health Experts List</h3>
+        <div class="search-filter">
+            <input type="text" id="expertSearch" placeholder="Search by name">
+            <button id="expertFilterBtn"><i class="fas fa-filter"></i></button>
+        </div>
+        <div class="table-wrapper">
+            <table id="healthExpertTable">
+                <thead>
+                    <tr>
+                        <th><span>No.</span></th>
+                        <th><span>Name</span></th>
+                        <th><span>Email</span></th>
+                        <th><span>Telephone</span></th>
+                        <th><span>DOB</span></th>
+                        <th><span>Type</span></th>
+                        <th><span>Qualification</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Health experts will be populated here by admin-report.js -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </main>
+    <button onclick="window.print()" class="print-button"><i class="fas fa-print"></i></button>
+    <footer>
+        <span class="footer">© 2024 nutriHealth, All rights reserved.</span>
+    </footer>
+</body>
+</html>

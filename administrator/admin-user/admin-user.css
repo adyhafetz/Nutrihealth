@@ -1,0 +1,238 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Import FontAwesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* General styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFADF;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav {
+    position: fixed;
+    background-color: #43B647;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    opacity: 0;
+    z-index: 1000;
+    width: 100%;
+    transform: translateY(-20px);
+    animation: fadeInMoveDown 1s ease forwards 0.5s;
+}
+
+@keyframes fadeInMoveDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav a {
+    color: #FFFFED;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 1em 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInMoveDown 1s ease forwards 0.5s;
+    color: #FFFFED;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInMoveUp 1s ease forwards 0.5s;
+    color: #FFFFED;
+    background-color: #43B647;
+}
+
+.logo {
+    margin-top: 40px;
+    width: 400px;
+}
+
+h2 {
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInMoveUp 1s ease forwards 1s;
+}
+
+@keyframes fadeInMoveUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Table styles */
+.table-wrapper {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center; /* Center-align content */
+}
+
+th {
+    background-color: transparent;
+    position: relative;
+}
+
+th span {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+tbody tr {
+    background-color: #fff; /* White background */
+    transition: background-color 0.3s ease;
+    border-radius: 20px; /* Round corners for each row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Darker background on hover */
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+/* Link styles */
+a {
+    color: #43b647;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+td:nth-child(6) {
+    max-width: 150px; /* Adjust as needed */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bar {
+    width: 500px; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    margin: 0 auto; /* Optional: Centers the div horizontally on the page */
+    /* Add other styles as needed */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0.1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    /* Adjustments for tablets and smaller screens */
+    main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    nav a {
+        margin: 0 4px;
+    }
+
+    nav, footer{
+        font-size: 0.7rem;
+    }
+
+    nav {
+        width: 95%;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.8em;
+    }
+
+    .bar {
+        width: 100%;
+        height: auto;
+        padding: 10px; /* Optional: Add padding for better spacing */
+    }
+}

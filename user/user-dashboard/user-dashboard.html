@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nutriHealth | Dashboard</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="user-dashboard.css">
+    <!-- External JavaScript with defer attribute for async loading -->
+    <script src="user-dashboard.js" defer></script>
+    <link rel="icon" href="../../media/favicon.ico" type="image/ico">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation bar with links to different user pages -->
+    <nav>
+        <a href="../user-dashboard/user-dashboard.html">Dashboard</a>
+        <a href="../user-meal-plan/user-meal-plan.html">Meal Plan</a>
+        <a href="../user-exercise-plan/user-exercise-plan.html">Exercise Plan</a>
+        <a href="../user-appointment/user-appointment.html">Appointment</a>
+        <a href="../user-profile/user-profile.html">Profile</a>
+    </nav>
+    <!-- Video background container -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <!-- Video sources -->
+            <source src="../../media/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Header with NutriHealth logo -->
+    <header>
+        <img src="../../media/nutriHealth.svg" alt="NutriHealth Logo" class="logo">
+    </header>
+    <!-- Main content area -->
+    <main>
+        <div class="container">
+            <!-- Progress bar for calorie tracking -->
+            <div class="progress-bar-container">
+                <svg viewBox="0 0 100 100" class="progress-bar">
+                    <circle cx="50" cy="50" r="45" class="progress-track"/>
+                    <circle cx="50" cy="50" r="45" class="progress-fill" id="progress-fill"/>
+                </svg>
+                <div class="calorie-counter">
+                    <span id="remaining-calories">0</span><br>
+                    <p id="remaining" class="remaining">Remaining</p>
+                </div>
+            </div>
+            <!-- Meal and exercise plans section -->
+            <div class="plans-container">
+                <div>
+                    <h2><i class="fas fa-utensils" style="color: #43b647;"></i> Meal Plan To-Do</h2>
+                    <div class="table-wrapper">
+                        <table id="userMealPlansTable">
+                            <tr>
+                                <th>Meal Type</th>
+                                <th>Meal Name</th>
+                                <th>Done</th>
+                            </tr>
+                            <tbody>
+                                <!-- User meal plans will be dynamically inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2><i class="fas fa-fire" style="color: #FF6347;"></i> Exercise Plan To-Do</h2>
+                    <div class="table-wrapper">
+                        <table id="userExercisePlansTable">
+                            <tr>
+                                <th>Exercise Type</th>
+                                <th>Exercise Name</th>
+                                <th>Done</th>
+                            </tr>
+                            <tbody>
+                                <!-- User exercise plans will be dynamically inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Upcoming appointments section -->
+        <h2><i class="fas fa-bell" style="color: #FFBF0E;"></i> Upcoming Appointment</h2>
+        <div class="table-wrapper">
+            <table id="userAppointmentsTable">
+                <thead>
+                    <tr>
+                        <th><span>Health Expert</span></th>
+                        <th><span>Date</span></th>
+                        <th><span>Time</span></th>
+                        <th><span>Details</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User appointments will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- Footer section -->
+    <footer>
+        <span class="footer">© 2024 NutriHealth, All rights reserved.</span>
+    </footer>
+</body>
+</html>

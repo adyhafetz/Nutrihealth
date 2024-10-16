@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFADF;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+nav {
+    position: fixed;
+    background-color: #43B647;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    opacity: 0;
+    z-index: 1000;
+    width: 100%;
+    transform: translateY(-20px);
+    animation: fadeInMoveDown 1s ease forwards 0.5s;
+}
+
+@keyframes fadeInMoveDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav a {
+    color: #FFFFED;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 1em 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInMoveDown 1s ease forwards 0.5s;
+    color: #FFFFED;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInMoveUp 1s ease forwards 0.5s;
+    color: #FFFFED;
+    background-color: #43B647;
+}
+
+.logo {
+    margin-top: 40px;
+    width: 400px;
+}
+
+h2 {
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInMoveUp 1s ease forwards 1s;
+}
+
+@keyframes fadeInMoveUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#scrollContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+#healthExpertsList {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    margin-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+
+#healthExpertsList div {
+    flex: 0 0 auto;
+    width: 300px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+}
+
+#healthExpertsList h3 {
+    color: #333;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.text-nutritionist {
+    color: #43B647;
+}
+
+.text-trainer {
+    color: #D9534F;
+}
+
+#healthExpertsList p {
+    margin-bottom: 15px;
+}
+
+#appointmentForm {
+    position: relative;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 77%;
+    margin: auto;
+}
+
+#appointmentForm h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#appointmentForm p {
+    margin-bottom: 15px;
+}
+
+#appointmentForm label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+#appointmentForm textarea,
+#appointmentForm input[type="date"],
+#appointmentForm input[type="time"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+table {
+    width: 80%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    overflow: hidden;
+    margin: auto;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+th {
+    background-color: transparent;
+    position: relative;
+}
+
+th span {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+tbody tr {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+#appointmentsList .details-column {
+    max-width: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+a {
+    color: #43B647;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.book-button {
+    background-color: #FFBF0E;
+    color: #fff;
+    border: none;
+    padding: 8px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    width: auto;
+}
+
+.book-button:hover {
+    background-color: #E5A50D;
+}
+
+.confirm-button {
+    background-color: #43B647;
+    color: #fff;
+    border: none;
+    padding: 8px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    width: auto;
+
+}
+
+.confirm-button:hover {
+    background-color: #3A9D3E;
+
+}
+
+.delete-button {
+    background-color: #D9534F;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.delete-button:hover {
+    background-color: #C24744;
+
+}
+
+.edit-button {
+    background-color: #00B7FF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #009FDB;
+
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0.1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+
+    main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    nav a {
+        margin: 0 4px;
+    }
+
+    nav,
+    footer {
+        font-size: 0.68rem;
+    }
+
+    nav {
+        width: 95%;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.8em;
+    }
+
+    #healthExpertsList {
+        flex-wrap: nowrap;
+
+        gap: 10px;
+
+        padding: 5px;
+
+    }
+
+    #healthExpertsList div {
+        width: 290px;
+
+    }
+
+    #scrollContainer {
+        width: 100%;
+        margin: auto;
+    }
+
+    #appointmentForm {
+        width: 88%;
+        margin: auto;
+    }
+}

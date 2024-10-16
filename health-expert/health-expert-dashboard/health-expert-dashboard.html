@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nutriHealth | Dashboard</title>
+    <link rel="stylesheet" href="health-expert-dashboard.css">
+    <script src="health-expert-dashboard.js"></script>
+    <link rel="icon" href="../../media/favicon.ico" type="image/ico">
+
+</head>
+<body>
+    <nav>
+        <a href="../health-expert-dashboard/health-expert-dashboard.html">Dashboard</a>
+        <a href="../health-expert-meal-plan/health-expert-meal-plan.html">Meal Plan</a>
+        <a href="../health-expert-exercise-plan/health-expert-exercise-plan.html">Exercise Plan</a>
+        <a href="../health-expert-appointment/health-expert-appointment.html">Appointment</a>
+        <a href="../health-expert-profile/health-expert-profile.html">Profile</a>
+    </nav>
+    <!-- Video background container -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <!-- Video sources -->
+            <source src="../../media/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Header with NutriHealth logo -->
+    <header>
+        <img src="../../media/nutriHealth.svg" alt="NutriHealth Logo" class="logo">
+    </header>
+    <main>
+        <h2><i class="fas fa-bell" style="color: #FFBF0E;"></i> My Appointments</h2>
+        <div id="scrollContainer">
+            <div id="appointmentsList">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span class="footer">© 2024 nutriHealth, All rights reserved.</span>
+    </footer>
+</body>
+</html>

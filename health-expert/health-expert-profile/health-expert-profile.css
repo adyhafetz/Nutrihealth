@@ -1,0 +1,226 @@
+/* Import FontAwesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFED;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav {
+    background-color: #43B647;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInMoveDown 1s ease forwards 0.5s;
+}
+
+@keyframes fadeInMoveDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav a {
+    color: #FFFFED;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 1em 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInMoveDown 1s ease forwards 0.5s;
+    color: #FFFFED;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInMoveUp 1s ease forwards 0.5s;
+    color: #FFFFED;
+    background-color: #43B647;
+}
+
+.logo {
+    width: 400px;
+}
+
+h2 {
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInMoveUp 1s ease forwards 1s;
+}
+
+@keyframes fadeInMoveUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="date"],
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.update-button {
+    background-color: #969696;
+    color: #fff;
+    border: none;
+    padding: 8px 40px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    width: auto;
+}
+
+.update-button:hover {
+    background-color: #7C7C7C;
+}
+
+/* Delete button styles */
+.delete-button {
+    color: #D9534F;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: rgba(217, 83, 79, 0.2);
+    color: #C24744;
+}
+
+a {
+    color: #43B647;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Background video */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0.1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    /* Adjustments for tablets and smaller screens */
+    main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    nav a {
+        margin: 0 4px;
+    }
+
+    nav, footer{
+        font-size: 0.7rem;
+    }
+
+    nav {
+        width: 95%;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}

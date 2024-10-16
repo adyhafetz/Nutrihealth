@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">nutriHealth | Welcome Back</title>
+    <link rel="stylesheet" href="signup-login.css">
+    <script src="signup-login.js" defer></script>
+    <link rel="icon" href="../media/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Video background container -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <!-- Video sources -->
+            <source src="../media/bg-signup-login.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+    </div>
+    <div id="container" class="container">
+        <!-- FORM SECTION -->
+        <div class="row">
+            <!-- SIGN UP -->
+            <div class="col align-items-center flex-col sign-up">
+                <div class="form-wrapper align-items-center">
+                    <div class="form sign-up">
+                        <form action="signup-login.php" method="post">
+                            <img src="../media/nutriHealth.svg" alt="NutriHealth Logo" class="signup-logo">
+                            <div class="input-group">
+                                <input type="text" id="name" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" id="password" name="password" placeholder="Password" required>
+                            </div>
+                            <div class="role-slider">
+                                <input type="radio" id="signup-role-user" name="role" value="USER" checked>
+                                <label for="signup-role-user">User</label>
+                                <input type="radio" id="signup-role-health-expert" name="role" value="HEALTH_EXPERT">
+                                <label for="signup-role-health-expert">Health Expert</label>
+                                <div class="slider-bg">
+                                    <div class="slider-signup"></div>
+                                </div>
+                            </div>
+                            <button type="submit" name="signup">
+                                Sign Up
+                            </button>
+                            <p>
+                                <span>
+                                    Already have an account?
+                                </span>
+                                <b onclick="toggle()" class="pointer">
+                                    Log in here
+                                </b>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- END SIGN UP -->
+            <!-- LOG IN -->
+            <div class="col align-items-center flex-col log-in">
+                <div class="form-wrapper align-items-center">
+                    <div class="form log-in">
+                        <form action="signup-login.php" method="post">
+                            <img src="../media/nutriHealth.svg" alt="NutriHealth Logo" class="login-logo">
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" id="password" name="password" placeholder="Password" required>
+                            </div>
+                            <div class="role-slider">
+                                <input type="radio" id="login-role-user" name="role" value="USER" checked>
+                                <label for="login-role-user">User</label>
+                                <input type="radio" id="login-role-health-expert" name="role" value="HEALTH_EXPERT">
+                                <label for="login-role-health-expert">Health Expert</label>
+                                <input type="radio" id="login-role-admin" name="role" value="ADMINISTRATOR">
+                                <label for="login-role-admin">Administrator</label>
+                                <div class="slider-bg">
+                                    <div class="slider-login"></div>
+                                </div>
+                            </div>
+                            <button type="submit" name="login">
+                                Log In
+                            </button>
+                            <p>
+                                <span>
+                                    Don't have an account?
+                                </span>
+                                <b onclick="toggle()" class="pointer">
+                                    Sign up here
+                                </b>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- END LOG IN -->
+        </div>
+        <!-- END FORM SECTION -->
+        <!-- CONTENT SECTION -->
+        <div class="row content-row">
+            <!-- LOG IN CONTENT -->
+            <div class="col align-items-center flex-col">
+                <div class="text log-in">
+                    <h2>
+                        Welcome Back!
+                    </h2>
+                </div>
+                <div class="img log-in">
+                </div>
+            </div>
+            <!-- END LOG IN CONTENT -->
+            <!-- SIGN UP CONTENT -->
+            <div class="col align-items-center flex-col">
+                <div class="img sign-up">
+                </div>
+                <div class="text sign-up">
+                    <h2>
+                        Join Us!
+                    </h2>
+                </div>
+            </div>
+            <!-- END SIGN UP CONTENT -->
+        </div>
+        <!-- END CONTENT SECTION -->
+    </div>
+
+    <!-- Developer Modal -->
+    <div id="developerModal" class="modal">
+        <button class="close-btn" aria-label="Close modal">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-content">
+            <h2>Developers</h2>
+            <div class="developers">
+                <div class="developer">
+                    <img src="../media/sofea.svg" alt="Maizatul Sofea Binti Salmi Hamdan">
+                    <table>
+                        <tr>
+                            <td><strong>Name:</strong></td>
+                            <td>Maizatul Sofea Binti Salmi Hamdan</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Student Number:</strong></td>
+                            <td>2022814166</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Program Code:</strong></td>
+                            <td>CDCS110</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Program Name:</strong></td>
+                            <td>Diploma of Computer Science</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Group:</strong></td>
+                            <td>JCDCS1104G</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email:</strong></td>
+                            <td>maizatulsofea@gmail.com</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="developer">
+                    <img src="../media/ady.svg" alt="Muhammad Ady Hafetz Bin Noor Azmee">
+                    <table>
+                        <tr>
+                            <td><strong>Name:</strong></td>
+                            <td>Muhammad Ady Hafetz Bin Noor Azmee</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Student Number:</strong></td>
+                            <td>2022699636</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Program Code:</strong></td>
+                            <td>CDCS110</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Program Name:</strong></td>
+                            <td>Diploma of Computer Science</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Group:</strong></td>
+                            <td>JCDCS1104G</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email:</strong></td>
+                            <td>adyhafetz@gmail.com</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="developer">
+                    <img src="../media/amir.svg" alt="Muhammad Amir Asyraf Bin Mohamed Taha">
+                    <table>
+                        <tr>
+                            <td><strong>Name:</strong></td>
+                            <td>Muhammad Amir Asyraf Bin Mohamed Taha</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Student Number:</strong></td>
+                            <td>2022851684</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Program Code:</strong></td>
+                            <td>CDCS110</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Program Name:</strong></td>
+                            <td>Diploma of Computer Science</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Group:</strong></td>
+                            <td>JCDCS1104G</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email:</strong></td>
+                            <td>amirasyraf@gmail.com</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

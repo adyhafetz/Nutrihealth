@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nutriHealth | Profile</title>
+    <link rel="stylesheet" href="admin-profile.css">
+    <script src="admin-profile.js" defer></script>
+    <link rel="icon" href="../../media/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <a href="../admin-dashboard/admin-dashboard.html">Dashboard</a>
+        <a href="../admin-user/admin-user.html">User</a>
+        <a href="../admin-health-expert/admin-health-expert.html">Health Expert</a>
+        <a href="../admin-report/admin-report.html">Report</a>
+        <a href="../admin-profile/admin-profile.html">Profile</a>
+    </nav>
+    <!-- Video background container -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <!-- Video sources -->
+            <source src="../../media/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Header with NutriHealth logo -->
+    <header>
+        <img src="../../media/nutriHealth.svg" alt="NutriHealth Logo" class="logo">
+    </header>
+    <main>
+        <h2><i class="fas fa-user" style="color: #969696;"></i> My Profile</h2>
+        <form action="update-profile.php" method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div>
+                <label for="tel">Telephone:</label>
+                <input type="text" id="tel" name="tel" required>
+            </div>
+            <div>
+                <button class="update-button" type="submit"><i class="fas fa-save"></i></button>
+            </div>
+            <div class="margin-top">
+                <a class="delete-button" href="delete-profile.php" onclick="return confirm('Are you sure you want to delete your account?');"><i class="fas fa-trash"></i> Delete Account</a>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <span class="footer">© 2024 nutriHealth, All rights reserved.</span>
+    </footer>
+</body>
+</html>

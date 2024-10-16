@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nutriHealth | Appointment</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="user-appointment.css">
+    <!-- External JavaScript with defer attribute for async loading -->
+    <script src="user-appointment.js" defer></script>
+    <link rel="icon" href="../../media/favicon.ico" type="image/ico">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation links -->
+    <nav>
+        <a href="../user-dashboard/user-dashboard.html">Dashboard</a>
+        <a href="../user-meal-plan/user-meal-plan.html">Meal Plan</a>
+        <a href="../user-exercise-plan/user-exercise-plan.html">Exercise Plan</a>
+        <a href="../user-appointment/user-appointment.html">Appointment</a>
+        <a href="../user-profile/user-profile.html">Profile</a>
+    </nav>
+    <!-- Video background container -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <!-- Video sources -->
+            <source src="../../media/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Header with logo -->
+    <header>
+        <img src="../../media/nutriHealth.svg" alt="NutriHealth Logo" class="logo">
+    </header>
+    <main>
+        <!-- Section for scheduling appointments -->
+        <h2><i class="fas fa-bell" style="color: #FFBF0E;"></i> Schedule Appointments</h2>
+        <!-- Container for health experts list -->
+        <div id="scrollContainer">
+            <div id="healthExpertsList">
+                <!-- Content added dynamically by JavaScript -->
+            </div>
+        </div>
+        <!-- Appointment Booking Form -->
+        <div id="appointmentForm" style="display:none;">
+            <!-- Close button for the form -->
+            <button class="close-button" id="close-button"><i class="fas fa-times"></i></button>
+            <!-- Appointment booking form -->
+            <form id="bookingForm">
+                <input type="hidden" id="appointmentID" name="appointmentID">
+                <h2>Book Appointment with <span id="expertName"></span></h2>
+                <p><strong>Email:</strong> <span id="expertEmail"></span></p>
+                <p><strong>Phone:</strong> <span id="expertTel"></span></p>
+                <p><strong>Bio:</strong> <span id="expertBio"></span></p>
+
+                <label for="appointmentDetails">Appointment Details:</label>
+                <textarea id="appointmentDetails" name="appointmentDetails" required></textarea>
+
+                <label for="appointmentDate">Date:</label>
+                <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+                <label for="appointmentTime">Time:</label>
+                <input type="time" id="appointmentTime" name="appointmentTime" required>
+
+                <button type="submit" class="confirm-button"><i class="fas fa-calendar-check"></i></button>
+            </form>
+        </div>
+        <!-- Section for displaying user appointments -->
+        <h2><i class="fas fa-bell" style="color: #FFBF0E;"></i> My Appointments</h2>
+        <div class="table-wrapper">
+            <table id="appointmentsTable">
+                <thead>
+                    <tr>
+                        <th><span>Health Expert</span></th>
+                        <th><span>Date</span></th>
+                        <th><span>Time</span></th>
+                        <th><span>Details</span></th>
+                        <th><span>Edit</span></th>
+                        <th><span>Delete</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Appointments will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- Footer section -->
+    <footer>
+        <span class="footer">© 2024 nutriHealth, All rights reserved.</span>
+    </footer>
+</body>
+</html>

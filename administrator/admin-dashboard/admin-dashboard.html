@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nutriHealth | Dashboard</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <script src="admin-dashboard.js" defer></script>
+    <link rel="icon" href="../../media/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <a href="admin-dashboard.html" class="active">Dashboard</a>
+        <a href="../admin-user/admin-user.html">User</a>
+        <a href="../admin-health-expert/admin-health-expert.html">Health Expert</a>
+        <a href="../admin-report/admin-report.html">Report</a>
+        <a href="../admin-profile/admin-profile.html">Profile</a>
+    </nav>
+    <!-- Video background container -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <!-- Video sources -->
+            <source src="../../media/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Header with NutriHealth logo -->
+    <header>
+        <img src="../../media/nutriHealth.svg" alt="NutriHealth Logo" class="logo">
+    </header>
+    <main>
+        <h2><i class="fas fa-users" style="color: #969696;"></i> Number of End-User</h2>
+        <div class="container">
+            <div class="box">
+                <h3><i class="fas fa-user" style="color: #00B7FF;"></i> Users</h3>
+                <p id="totalUsers"></p>
+            </div>
+            <div class="box">
+                <h3><i class="fa-solid fa-user-doctor" style="color: #FFBF0E;"></i> Health Experts</h3>
+                <p id="totalHealthExperts"></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span class="footer">© 2024 nutriHealth, All rights reserved.</span>
+    </footer>
+</body>
+</html>

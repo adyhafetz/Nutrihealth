@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nutriHealth | User</title>
+    <link rel="stylesheet" href="admin-user.css">
+    <script src="admin-user.js" defer></script>
+    <link rel="icon" href="../../media/favicon.ico" type="image/ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="../admin-dashboard/admin-dashboard.html">Dashboard</a>
+        <a href="../admin-user/admin-user.html">User</a>
+        <a href="../admin-health-expert/admin-health-expert.html">Health Expert</a>
+        <a href="../admin-report/admin-report.html">Report</a>
+        <a href="../admin-profile/admin-profile.html">Profile</a>
+    </nav>
+    <!-- Video background container -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <!-- Video sources -->
+            <source src="../../media/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Header with NutriHealth logo -->
+    <header>
+        <img src="../../media/nutriHealth.svg" alt="NutriHealth Logo" class="logo">
+    </header>
+    <main>
+        <h2><i class="fas fa-user" style="color: #00B7FF;"></i> Users List</h2>
+        <div class="bar">
+            <canvas id="bmiChart"></canvas>
+        </div>
+        <div class="table-wrapper">
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th><span>No.</span></th>
+                        <th><span>Name</span></th>
+                        <th><span>Email</span></th>
+                        <th><span>Telephone</span></th>
+                        <th><span>DOB</span></th>
+                        <th><span>Weight (kg)</span></th>
+                        <th><span>Height (cm)</span></th>
+                        <th><span>BMI</span></th>
+                        <th><span>Target Calories</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Users will be populated here by admin-user.js -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <span class="footer">© 2024 nutriHealth, All rights reserved.</span>
+    </footer>
+</body>
+</html>
